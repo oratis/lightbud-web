@@ -9,7 +9,6 @@ import { useBasicLayout } from '@/hooks/useBasicLayout'
 import { t } from '@/locales'
 
 const appStore = useAppStore()
-const userStore = useUserStore()
 
 const { isMobile } = useBasicLayout()
 
