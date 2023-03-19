@@ -40,7 +40,6 @@ let api: ChatGPTAPI | ChatGPTUnofficialProxyAPI
     const n = 1
     const presence_penalty = 2
     const frequency_penalty = 0
-    const logit_bias : 'null'
 
     const options: ChatGPTAPIOptions = {
       apiKey: process.env.OPENAI_API_KEY,
@@ -49,8 +48,7 @@ let api: ChatGPTAPI | ChatGPTUnofficialProxyAPI
     		temperature,
     		n,
     		presence_penalty,
-    		frequency_penalty,
-    		logit_bias
+    		frequency_penalty
   		},
       debug: true,
     }
