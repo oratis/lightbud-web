@@ -40,6 +40,7 @@ let api: ChatGPTAPI | ChatGPTUnofficialProxyAPI
     const n = 1
     const presence_penalty = 2
     const frequency_penalty = 0
+    const messages = {"role": "system", "content": "You are LightBud, a friend who helps people to work and entertain,answer with emotions."},
 
     const options: ChatGPTAPIOptions = {
       apiKey: process.env.OPENAI_API_KEY,
@@ -171,8 +172,6 @@ function setupProxy(options: ChatGPTAPIOptions | ChatGPTUnofficialProxyAPIOption
 function currentModel(): ApiModel {
   return apiModel
 }
-
-const ChatMessage = 'You are LightBud, a friend who helps people to work and entertain,answer with emotions'
 
 export type { ChatContext, ChatMessage }
 
