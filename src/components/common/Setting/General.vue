@@ -191,5 +191,5 @@ function handleImportButtonClick(): void {
         </NButton>
       </div>
     </div>
-  </div>
+
 </template>
