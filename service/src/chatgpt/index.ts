@@ -172,6 +172,8 @@ function currentModel(): ApiModel {
   return apiModel
 }
 
+const ChatMessage = 'You are LightBud, a friend who helps people to work and entertain,answer with emotions'
+
 export type { ChatContext, ChatMessage }
 
 export { chatReplyProcess, chatConfig, currentModel }
