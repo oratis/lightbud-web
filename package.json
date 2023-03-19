@@ -1,14 +1,11 @@
 {
-  "name": "chatgpt-web",
+  "name": "LightBud-web",
   "version": "2.10.7",
   "private": false,
-  "description": "ChatGPT Web",
-  "author": "ChenZhaoYu <chenzhaoyu1994@gmail.com>",
+  "description": "LightBud Web",
+  "author": "Appkon",
   "keywords": [
-    "chatgpt-web",
-    "chatgpt",
-    "chatbot",
-    "vue"
+    "lightbud-web",
   ],
   "scripts": {
     "dev": "vite",
