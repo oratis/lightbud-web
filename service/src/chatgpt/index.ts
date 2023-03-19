@@ -36,10 +36,14 @@ let api: ChatGPTAPI | ChatGPTUnofficialProxyAPI
   if (process.env.OPENAI_API_KEY) {
     const OPENAI_API_MODEL = process.env.OPENAI_API_MODEL
     const model = isNotEmptyString(OPENAI_API_MODEL) ? OPENAI_API_MODEL : 'gpt-3.5-turbo'
+    const temperature = '2'
 
     const options: ChatGPTAPIOptions = {
       apiKey: process.env.OPENAI_API_KEY,
-      completionParams: { model },
+      completionParams: {
+    		model,
+    		temperature
+  		},
       debug: true,
     }
 
