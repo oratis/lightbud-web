@@ -20,7 +20,7 @@ export default defineComponent({
       name: 'AI小助手',
       personality: 'optimistic',
       chattiness: 50,
-      memories: ['我们一起学习吧', '让我们一起成长']
+      memories: ['我们一起学习吧', '让我们一起成长'],
       isNotificationShown: false
     })
 
