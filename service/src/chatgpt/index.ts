@@ -49,7 +49,8 @@ let api: ChatGPTAPI | ChatGPTUnofficialProxyAPI
     		temperature,
     		n,
     		presence_penalty,
-    		frequency_penalty
+    		frequency_penalty,
+    		messages
   		},
       debug: true,
     }
