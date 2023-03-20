@@ -1,63 +1,32 @@
 <script lang="ts" setup>
+import { NButton } from 'naive-ui'
+import { useRouter } from 'vue-router'
+import Icon500 from '@/icons/500.vue'
 
-import { defineComponent, reactive } from 'vue'
-import { NLayout, NLayoutHeader, NLayoutContent, NNotification } from 'naive-ui'
-import Settings from './Settings.vue'
+const router = useRouter()
 
-
-export default defineComponent({
-  name: 'App',
-  components: {
-    Settings,
-    NLayout,
-    NLayoutHeader,
-    NLayoutContent,
-    NNotification
-  },
-  setup() {
-    const state = reactive({
-      aiid: ':uuid?',
-      name: 'AI小助手',
-      personality: 'optimistic',
-      chattiness: 50,
-      memories: ['我们一起学习吧', '让我们一起成长'],
-      isNotificationShown: false
-    })
-
-    function handleSaveSettings() {
-      // 处理保存设置的逻辑，例如将设置保存到数据库或本地存储中
-
-      state.isNotificationShown = true
-    }
-
-    return {
-      ...state,
-      handleSaveSettings
-    }
-  }
-})
+function goHome() {
+  router.push('/')
+}
 </script>
 
 <template>
-  <div class="app">
-    <n-layout>
-      <n-layout-header>AI 设置</n-layout-header>
-
-      <n-layout-content>
-        <settings
-          :aiid="aiid"
-          :name="name"
-          :personality="personality"
-          :chattiness="chattiness"
-          :memories="memories"
-          @save="handleSaveSettings"
-        />
-      </n-layout-content>
-    </n-layout>
-
-    <n-notification v-model:show="isNotificationShown" title="成功" type="success">
-      设置已保存。
-    </n-notification>
+  <div class="flex flex-col w-full h-full">
+    <div class="px-4 m-auto space-y-4 text-left max-[400px]">
+      <header class="space-y-2">
+        <h2 class="text-2xl font-bold text-center text-slate-800 dark:text-neutral-200">
+          500
+        </h2>
+        <p class="text-base text-center text-slate-500 dark:text-slate-500">
+          Server error
+        </p>
+        <div class="flex items-center justify-center text-center">
+          <Icon500 class="w-[300px]" />
+        </div>
+      </header>
+      <NButton type="primary" @click="goHome">
+        Go to Home
+      </NButton>
+    </div>
   </div>
 </template>
-
