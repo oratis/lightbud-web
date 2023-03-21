@@ -6,7 +6,7 @@ const router = useRouter()
 import { defineComponent } from 'vue'
 import { NInput, NButton } from 'naive-ui'
 
-export default defineComponent({
+const aiInfo = defineComponent({
   name: 'SaveText',
   components: { NInput, NButton },
   data() {
@@ -22,6 +22,8 @@ export default defineComponent({
   }
 })
 
+export default aiInfo
+
 </script>
 
 <template>
@@ -35,7 +37,6 @@ export default defineComponent({
           你的AIID是'uuid'
         </p>
         <div class="flex items-center justify-center text-center">
-          <Icon500 class="w-[300px]" />
         </div>
       </header>
       <NButton type="primary" @click="save">
