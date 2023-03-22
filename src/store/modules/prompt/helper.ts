@@ -1,8 +1,16 @@
 import { ss } from '@/utils/storage'
+import PromptInput from '../../../assets/prompts.json'
 
 const LOCAL_NAME = 'promptStore'
 
-export type PromptList = []
+
+
+export type PromptListItem = {
+  act: string;
+  prompt: string;
+}
+
+export type PromptList = Array<PromptListItem>
 
 export interface PromptStore {
   promptList: PromptList
@@ -16,3 +24,6 @@ export function getLocalPromptList(): PromptStore {
 export function setLocalPromptList(promptStore: PromptStore): void {
   ss.set(LOCAL_NAME, promptStore)
 }
+
+// 使用JSON数据更新promptList
+setLocalPromptList({promptList: PromptInput.promptList})
