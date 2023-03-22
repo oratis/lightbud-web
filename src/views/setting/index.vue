@@ -20,7 +20,7 @@ function goHome() {
           版本号:0.1
         </p>
         <div class="flex items-center justify-center text-center">
-          <img src="../../assets/version.png"/>
+          <img src="@/assets/version.png"/>
         </div>
       </header>
       <NButton type="primary" @click="goHome">
