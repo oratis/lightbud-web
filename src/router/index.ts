@@ -40,7 +40,7 @@ const routes: RouteRecordRaw[] = [
     {
     path: '/info',
     name: 'info',
-    component: () => import('@/views/info/index.vue'),
+    component: () => import('@/components/common/PromptStore/index.vue'),
   },
 
   {
