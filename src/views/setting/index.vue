@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { NButton } from 'naive-ui'
 import { useRouter } from 'vue-router'
-import Icon500 from '@/icons/500.vue'
 
 const router = useRouter()
 
@@ -21,7 +20,7 @@ function goHome() {
           版本号:0.1
         </p>
         <div class="flex items-center justify-center text-center">
-          <Icon500 class="w-[300px]" />
+          <img src="https://github.com/oratis/lightbud-web/blob/main/src/assets/version.png"></img>
         </div>
       </header>
       <NButton type="primary" @click="goHome">
