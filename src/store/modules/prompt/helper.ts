@@ -16,7 +16,7 @@ export interface PromptStore {
 
 export function getLocalPromptList(): PromptStore {
   const promptStore: PromptStore | undefined = ss.get(LOCAL_NAME)
-  return promptStore ?? { promptList: [] }
+  return promptStore ?? { promptList: promptInput }
 }
 
 export function setLocalPromptList(promptStore: PromptStore): void {
