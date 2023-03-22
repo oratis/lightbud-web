@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import type { PromptStore } from './helper'
 import { getLocalPromptList, setLocalPromptList } from './helper'
+import PromptInput from '../../../assets/prompts.json'
 
 export const usePromptStore = defineStore('prompt-store', {
   state: (): PromptStore => getLocalPromptList(),
