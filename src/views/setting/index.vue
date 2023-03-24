@@ -1,12 +1,11 @@
 <script lang="ts" setup>
 import { NButton } from 'naive-ui'
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-methods: {
-  openUrl(url) {
-    window.open(url);
-  }
+function goHome() {
+  router.push('/')
 }
 </script>
 
@@ -29,7 +28,7 @@ methods: {
 
         </div>
       </header>
-      <NButton type="primary" @click="openUrl('https://www.gptwiki.net')">
+      <NButton type="primary" @click="goHome">
         问题反馈请访问：www.gptwiki.net
       </NButton>
     </div>
