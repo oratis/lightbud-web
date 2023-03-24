@@ -269,7 +269,7 @@ const dataSource = computed(() => {
 
 <template>
   <div class="flex flex-col w-full h-full">
-    <div class="px-4 m-4 space-y-4 h-100vh">
+    <div class="px-4 m-4 space-y-4 h-full">
       <div class="space-y-4">
         <div class="flex gap-3 mb-4" :class="[isMobile ? 'flex-col' : 'flex-row justify-between']">
           <div class="flex items-center space-x-4">
@@ -296,10 +296,10 @@ const dataSource = computed(() => {
           </div>
         </div>
         <NDataTable
-          v-if="!isMobile" :max-height="100vh" :columns="columns" :data="dataSource" :pagination="pagination"
+          v-if="!isMobile" :max-height="400" :columns="columns" :data="dataSource" :pagination="pagination"
           :bordered="false"
         />
-        <NList v-if="isMobile" style="max-height: 100vh; overflow-y: auto; background-color:black;">
+        <NList v-if="isMobile" style="overflow-y: auto; background-color:black;">
           <NListItem v-for="(item, index) of dataSource" :key="index">
             <NThing :title="item.renderKey" :description="item.renderValue" />
             <template #suffix>
