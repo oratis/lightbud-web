@@ -296,7 +296,7 @@ const dataSource = computed(() => {
           </div>
         </div>
         <NDataTable
-          v-if="!isMobile" :max-height="400" :columns="columns" :data="dataSource" :pagination="pagination"
+          v-if="!isMobile" :columns="columns" :data="dataSource" :pagination="pagination"
           :bordered="false"
         />
         <NList v-if="isMobile" style="overflow-y: auto; background-color:black;">
