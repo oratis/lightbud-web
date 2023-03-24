@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+<<<<<<< HEAD
 import type { DataTableColumns } from 'naive-ui'
 import { computed, h, ref, watch } from 'vue'
 import { NButton, NDataTable, NInput, NList, NListItem, NModal, NPopconfirm, NSpace, NThing, useMessage } from 'naive-ui'
@@ -341,4 +342,23 @@ const dataSource = computed(() => {
       </NModal>
     </div>
   </div>
+=======
+import PromptStore from '@/components/common'
+
+export default {
+    name: 'Info',
+    components: {
+      PromptStore,
+    },
+  }
+
+</script>
+
+<template>
+<div class="flex flex-col w-full h-full">
+  <div class="px-4 m-auto space-y-4 text-center max-[400px]">
+		   <PromptStore></PromptStore>
+  </div>
+</div>
+>>>>>>> 23f0c634babb32ea068c1e7ccac170c9283afb79
 </template>
