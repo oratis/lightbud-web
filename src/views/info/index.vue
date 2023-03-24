@@ -269,7 +269,7 @@ const dataSource = computed(() => {
 
 <template>
   <div class="flex flex-col w-full h-full">
-    <div class="px-4 m-auto space-y-4 text-center max-[400px]">
+    <div class="px-4 m-4 space-y-4 text-center">
       <div class="space-y-4">
         <div class="flex gap-3 mb-4" :class="[isMobile ? 'flex-col' : 'flex-row justify-between']">
           <div class="flex items-center space-x-4">
